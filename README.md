@@ -1,1 +1,2 @@
-# Image-Tool
+# Image-Editor
+Advanced Image Editor Telegram Bot.
