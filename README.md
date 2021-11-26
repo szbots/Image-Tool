@@ -5,7 +5,7 @@
 
 ## 🌟 Don't forget to star this repo if you liked it.
 
-## Star 🌟 , Fork 🍴 & Deploy ❤️
+### Star 🌟 , Fork 🍴 & Deploy ❤️
  
  ![TG Channel](https://img.shields.io/badge/dynamic/json?color=blue&label=szteam%20@szteambots&query=subscribers&url=https%3A%2F%2Fonline-users-api.up.railway.app%2Fcheck%3Fchat%3Dszteambots&logo=telegram)
 ![TG Chat](https://img.shields.io/badge/dynamic/json?color=blue&label=support%20@slbotzone&query=members&url=https%3A%2F%2Fonline-users-api.up.railway.app%2Fcheck%3Fchat%3Dslbotzone&logo=telegram) 
@@ -30,32 +30,15 @@
 
     
 ## 🌶 Powered by:
-◈` Single Developers Logo Creator API`
-◈` TroJanzHex Image editor`
-◈` Dᴀᴍᴀɴᴛʜᴀ Jᴀsɪɴɢʜᴇ Random Logo Api`
+◈` Single Developers Logo Creator API`\n◈` TroJanzHex Image editor`\n◈` Dᴀᴍᴀɴᴛʜᴀ Jᴀsɪɴɢʜᴇ Random Logo Api`
 
- ## New Features Updated 😊
+ ## New Features Updated 😊[here](https://t.me/szteambots/748)
 - 🍀𝘼𝙥𝙞 𝘽𝙖𝙨𝙚𝙙 𝙡𝙤𝙜𝙤 𝘾𝙧𝙚𝙖𝙩𝙤𝙧
 - 💐𝙍𝙖𝙣𝙙𝙤 𝙡𝙤𝙜𝙤 𝘾𝙧𝙚𝙖𝙩𝙤𝙧 
 - ♣️ 𝘾𝙖𝙧𝙗𝙤𝙣 𝙢𝙖𝙠𝙚𝙧
 - 🍃𝘽𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙 𝙍𝙚𝙢𝙤𝙫𝙚𝙧
 - ✍️𝙏𝙚𝙭𝙩 𝙖𝙧𝙩 𝙂𝙚𝙣𝙖𝙧𝙖𝙩𝙤𝙧 80+ 𝙨𝙩𝙮𝙡𝙚𝙨
-- ⭕️𝙄𝙢𝙖𝙜𝙚 𝙚𝙙𝙞𝙩𝙤𝙧 
-           - 💡𝘽𝙧𝙞𝙜𝙝𝙩 
-           - 🖼 𝙈𝙞𝙭𝙚𝙙 
-           - 🔘 𝘽𝙡𝙖𝙘𝙠 & 𝙒𝙝𝙞𝙩𝙚 
-           - ⚪️ 𝘾𝙞𝙧𝙘𝙡𝙚 
-           - 🩸 𝘽𝙡𝙪𝙧
-           - 🔲 𝘽𝙤𝙧𝙙𝙚𝙧 
-           - 🗯 𝙎𝙩𝙞𝙘𝙠𝙚𝙧 
-           - 🔄 𝙍𝙤𝙩𝙖𝙩𝙚
-           - 🌀 𝘾𝙤𝙣𝙩𝙧𝙖𝙨𝙩 
-           - 🌇 𝙎𝙚𝙥𝙞𝙖 
-           - ✏️ 𝙋𝙚𝙣𝙘𝙞𝙡 
-           - ⛄️ 𝘾𝙖𝙧𝙩𝙤𝙤𝙣 
-           - ✨ 𝙄𝙣𝙫𝙚𝙧𝙩 
-           - 🖲 𝙂𝙡𝙞𝙩𝙘𝙝
-           - 🗑 𝙍𝙚𝙢𝙤𝙫𝙚 𝘽𝙖𝙘𝙠𝙜𝙧𝙤𝙪𝙣𝙙
+- ⭕️𝙄𝙢𝙖𝙜𝙚 𝙚𝙙𝙞𝙩𝙤𝙧 [here](https://t.me/szimagebot)
 
 
  
