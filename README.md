@@ -30,7 +30,9 @@
 
     
 ## 🌶 Powered by:
-◈` Single Developers Logo Creator API`\n◈` TroJanzHex Image editor`\n◈` Dᴀᴍᴀɴᴛʜᴀ Jᴀsɪɴɢʜᴇ Random Logo Api`
+-◈` Single Developers Logo Creator API`
+-◈` TroJanzHex Image editor`
+-◈` Dᴀᴍᴀɴᴛʜᴀ Jᴀsɪɴɢʜᴇ Random Logo Api`
 
  ## New Features Updated 😊[here](https://t.me/szteambots/748)
 - 🍀𝘼𝙥𝙞 𝘽𝙖𝙨𝙚𝙙 𝙡𝙤𝙜𝙤 𝘾𝙧𝙚𝙖𝙩𝙤𝙧
