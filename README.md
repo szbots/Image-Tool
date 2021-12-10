@@ -14,7 +14,7 @@
 - 💎Ltc coin ``` LhCj3H8abLuSb81B9ojJYpHPkLz6xCYayn```
 - 💎Bit Coin ``` 17fdwXfHcj3Yeu7LrswnQRX15RzSK5bXER ```
 
-## ⚙️ Bot hoster [Tinura Dinith](https://t.me/boltbacker)
+## ⚙️ Bot Coder [Tinura Dinith](https://t.me/boltbacker)
 
 <p align="center"> <br>
     <img src="https://img.shields.io/github/license/szbots/Image-Tool?style=for-the-badge&logo=telegram" alt="LICENSE">
