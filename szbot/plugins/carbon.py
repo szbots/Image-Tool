@@ -24,6 +24,7 @@ def get_text(message: Message) -> [None, str]:
     else:
         return None
 
+    
 BUTTON = InlineKeyboardMarkup(
             [
                 [
