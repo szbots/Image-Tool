@@ -45,7 +45,7 @@ Carbon Genarated Successfully✅
 ࿂ **Requestor** :. {message.from_user.mention}
 ࿂ **Powered By **  : [szteambots](https://t.me/szteambots)
 """
-    if not message.reply_to_message.text:
+    if not message.reply_to_message:
         text = get_text(message)
         carbon = await make_carbon(text)
         return await client.send_photo(message.chat.id, carbon,caption=TEXT,reply_markup= BUTTON)
