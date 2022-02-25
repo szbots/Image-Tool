@@ -44,8 +44,6 @@ Carbon Genarated Successfully✅
 ࿂ **Requestor** :. {message.from_user.mention}
 ࿂ **Powered By **  : [szteambots](https://t.me/szteambots)
 """
-    if not message.reply_to_message:
-        return await message.reply_text("Reply to a text message.")
     if not message.reply_to_message.text:
         text = get_text(message)
         carbon = await make_carbon(text)
