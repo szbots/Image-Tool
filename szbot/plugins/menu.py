@@ -2,25 +2,28 @@ from szbot import sz
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
+START_TEXT = f"""
+🙋‍♂️ I am  <b>Imagᥱ Tooᥣs Bot</b>
 
-
-
-
-
+<b>I specialize for logo design  Services with Amazing logo 
+Creator Platform & more tools</b>
+                                
+<b>Powered by</b>:
+◈ <code>Single Developers Logo Creator API</code>
+◈ <code>TroJanzHex Image editor</code>
+◈ <code>Pyrogram</code>
+"""
 
 START_BTN = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("About", callback_data="aboutmenu"),
-                    InlineKeyboardButton("Help", callback_data="helpmenu")
+                    InlineKeyboardButton("About", callback_data="_about"),
+                    InlineKeyboardButton("Help", callback_data="_help")
                 ],
                 [
                     InlineKeyboardButton("Updates", url="https://t.me/szteambots"),
                     InlineKeyboardButton("Support", url="https://t.me/slbotzone")
                 ],
-                [
-                    InlineKeyboardButton("➕Add me to your group ➕", url="http://t.me/szimagebot?startgroup=botstart") 
-                ]
             ]
         )
 
@@ -97,14 +100,14 @@ async def startmenu(_, query: CallbackQuery):
      disable_web_page_preview=True
     )
 
-@sz.on_callback_query(filters.regex("helpmenu"))
+@sz.on_callback_query(filters.regex("_help"))
 async def helpmenu(_, query: CallbackQuery):
     await query.edit_message_text(HELP_TEXT,
         reply_markup=BACKTOHOME,
      disable_web_page_preview=True
     )
 
-@sz.on_callback_query(filters.regex("aboutmenu"))
+@sz.on_callback_query(filters.regex("_about"))
 async def aboutenu(_, query: CallbackQuery):
     await query.edit_message_text(ABOUT_TEXT,
         reply_markup=BACKTOHOME,
@@ -114,4 +117,3 @@ async def aboutenu(_, query: CallbackQuery):
 @sz.on_callback_query(filters.regex("closeit"))
 async def close(_, query: CallbackQuery):
     await query.message.delete()        
-
