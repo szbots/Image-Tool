@@ -28,10 +28,8 @@ async def make_logo(_, message):
             return await message.reply_text("Please give a text to make logo")
     m = await message.reply_text("`Creating..`")
     name = message.text.split(None, 1)[1] if len(message.command) < 3 else message.text.split(None, 1)[1].replace(" ", "%20")
-    api = get(f"https://api.singledevelopers.net/logo?name={name}")
     await m.edit("`📤 Uploading ...`")
     await sz.send_chat_action(message.chat.id, "upload_photo")
-    img = Image.open(BytesIO(api.content))
     murl = requests.get(f"https://single-developers.up.railway.app/logo?search={name}").history[1].url
     imgcaption = f"""
 Logo Genarated Successfully✅
@@ -41,8 +39,6 @@ Logo Genarated Successfully✅
 ࿂ **Powered By **  : [szteambots](https://t.me/szteambots)
 ࿂ **Download link** : `{murl}`
 """
-    logoname = "szlogo.png"
-    img.save(logoname, "png")
     await message.reply_photo(photo = murl,
                               caption=imgcaption,
                               reply_markup=InlineKeyboardMarkup(
@@ -55,10 +51,8 @@ Logo Genarated Successfully✅
             ]
           ),)
     await m.delete()
-    if os.path.exists(logoname):
-            os.remove(logoname)
                        
-@sz.on_message(filters.command(["logo", f"logo@szimagebot"]))
+@sz.on_message(filters.command(["logohq", f"logohq@szimagebot"]))
 async def make_logo(_, message):
     await AddUserToDatabase(_, message)
     FSub = await ForceSub(_, message)
@@ -68,10 +62,8 @@ async def make_logo(_, message):
             return await message.reply_text("Please give a text to make logo")
     m = await message.reply_text("`Creating..`")
     name = message.text.split(None, 1)[1] if len(message.command) < 3 else message.text.split(None, 1)[1].replace(" ", "%20")
-    api = get(f"https://api.singledevelopers.net/logo?name={name}")
     await m.edit("`📤 Uploading ...`")
     await sz.send_chat_action(message.chat.id, "upload_photo")
-    img = Image.open(BytesIO(api.content))
     murl = requests.get(f"https://single-developers.up.railway.app/logo?search={name}").history[1].url
     imgcaption = f"""
 Logohq Genarated Successfully✅
@@ -80,8 +72,6 @@ Logohq Genarated Successfully✅
 ࿂ **Powered By **  : [szteambots](https://t.me/szteambots)
 ࿂ **Download link** : `{murl}`
 """
-    logoname = "szlogo.png"
-    img.save(logoname, "png")
     await message.reply_photo(photo = murl,
                               caption=imgcaption,
                               reply_markup=InlineKeyboardMarkup(
@@ -94,5 +84,3 @@ Logohq Genarated Successfully✅
             ]
           ),)
     await m.delete()
-    if os.path.exists(logoname):
-            os.remove(logoname)
