@@ -57,8 +57,6 @@ Creator Platform & more tools</b>
 ◈ <code>Pyrogram</code>
 
 📊 <b>Users</b> : {total_users}
-
-©2021<a href=\"https://t.me/szteambots\"> sz Team Bots <sz/></a>
 """
     await update.reply_photo(
                     photo=(random.choice(START_IMG)),
