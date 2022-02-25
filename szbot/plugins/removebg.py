@@ -39,30 +39,13 @@ async def is_app_admin(chat, user):
     if isinstance(chat, types.InputPeerUser):
         return True
 
-TEXT=f"""🗑️** Background removed Successfully**✅
-◇───────────────◇
-🔥 **Removed  by** : [ 🎨 Imᥲgᥱ Tooᥣs Bot](https://t.me/szimagebot)
-⚡️ **Powered By**  : `【SZ™】`
-◇───────────────◇
-©2021[【SZ™】 team ](https://t.me/szteambots) **All Right Reserved**⚠️️
-"""    
+  
     
-    
-BUTTONS = InlineKeyboardMarkup(	
-      [	
-        [	
-        InlineKeyboardButton(text="➕ Add me to your group ➕", url=f"http://t.me/szimagebot?startgroup=botstart") 	
-        ],	
-        [	
-         InlineKeyboardButton(text="🗣️Join my updates ", url=f"https://t.me/sszteambots") 	
-        ]	
-      ]      	
-    )    
-    
+  
 
 @sz.on(events.NewMessage(pattern='^/rmbg'))
 async def _(event):
-    HELP_STR = "use `/rmbg` as reply to a media.\nJoin my updates channel @sl_bot_zone "
+    HELP_STR = "use `/rmbg` as reply to a media."
     if event.fwd_from:
         return
     if event.is_group:
@@ -74,6 +57,12 @@ async def _(event):
         await event.reply("You need API token from remove.bg to use this plugin.")
         return False
     start = datetime.now()
+    TEXT=f"""
+** Background removed Successfully**✅
+
+࿂ **Requestor** :. {event.from_user.mention}
+࿂ **Powered By **  : [szteambots](https://t.me/szteambots)
+"""  
     message_id = event.message.id
     if event.reply_to_msg_id:
         message_id = event.reply_to_msg_id
@@ -104,12 +93,11 @@ async def _(event):
                 allow_cache=False,
                 reply_to=message_id,
                 caption=TEXT,
-                reply_markup=BUTTONS,
                 disable_web_page_preview=True
             )
         end = datetime.now()
         ms = (end - start).seconds
-        await gg.edit("**🗑️Background Removed in `{}` seconds **".format(ms))
+        await gg.edit("**Background Removed in `{}` seconds **".format(ms))
         await gg.delete()
     else:
         await gg.edit(
