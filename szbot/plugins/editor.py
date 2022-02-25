@@ -1,4 +1,5 @@
 from pyrogram import filters
+from szbot.helpers.fsub import ForceSub
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
@@ -57,10 +58,11 @@ from szbot import sz as Client
 lel = 00000000
 # pylint:disable=import-error
 @Client.on_message(filters.command(["edit", "editor"]))
+@ForceSub
 async def photo(client: Client, message: Message):
     try:
         if not message.reply_to_message.photo:
-            await client.send_message(message.chat.id, "Reply to an image man!ㅤㅤ")
+            await client.send_message(message.chat.id, "Reply to an image please")
             return
     except:
         return
@@ -72,11 +74,17 @@ async def photo(client: Client, message: Message):
     try:
         await client.send_message(
             chat_id=message.chat.id,
-            text="☘️ Select your required mode from below!✅\n\n◇───────────────◇\n🔥 Designed by : @szimagebot\n🌷 Requestor : \n⚡️ Powered By   : 【SZ™】\n\n◇───────────────◇\n©2021【SZ™】 team  All Right Reserved⚠️️ㅤ",
+            text=f"""
+Select your required mode from below!
+
+**Designer :** @szimagebot
+**Requestor :** {message.from_user.mention}
+**Powered By**:@szteambots 
+""",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="◇───────────────◇", callback_data="right"),
+                        InlineKeyboardButton(text="=======================", callback_data="right"),
                     ],
                     [
                         InlineKeyboardButton(text="💡 Briget", callback_data="bright"),
@@ -104,14 +112,14 @@ async def photo(client: Client, message: Message):
                         InlineKeyboardButton(text="🔄 Invert", callback_data="inverted"),
                         InlineKeyboardButton(text="🔮 Glitch", callback_data="glitch"),
                         InlineKeyboardButton(
-                            text="✂️ Remove BG", callback_data="removebg"
+                            text="Remove BG 🗑", callback_data="removebg"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="🗑️ Close 🗑️", callback_data="close_e"),
+                        InlineKeyboardButton(text=" Close ✖️", callback_data="close_e"),
                     ],
                     [
-                        InlineKeyboardButton(text="◇───────────────◇", callback_data="ight"),
+                        InlineKeyboardButton(text="=======================", callback_data="ight"),
                     ],
                 ]
             ),
@@ -134,7 +142,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if lel == user_id:
         if query.data == "removebg":
             await query.message.edit_text(
-                "**Select required mode**ㅤㅤㅤㅤ",
+                "**Select required mode**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -188,7 +196,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data == "glitch":
             await query.message.edit_text(
-                "**Select required mode**ㅤㅤㅤㅤ",
+                "**Select required mode**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
