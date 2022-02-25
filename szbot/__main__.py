@@ -44,19 +44,21 @@ async def start(bot, update):
         return
     total_users = await db.total_users_count()
     START_TEXT = f"""
-👋 Hello {update.from_user.mention} , 🤗
+👋 Hello {update.from_user.mention} !
 
-🙋‍♂️ I am  🎨<b>Imagᥱ Tooᥣs Bot</b>
-<b>I specialize for logo design  Services with Amazing logo  Creator Platform & more tools</b>💐
+🙋‍♂️ I am  <b>Imagᥱ Tooᥣs Bot</b>
+
+<b>I specialize for logo design  Services with Amazing logo 
+Creator Platform & more tools</b>
                                 
-🌶 <b>Powered by</b>:
+<b>Powered by</b>:
 ◈ <code>Single Developers Logo Creator API</code>
 ◈ <code>TroJanzHex Image editor</code>
-◈ <code>Dᴀᴍᴀɴᴛʜᴀ Jᴀsɪɴɢʜᴇ Random Logo Api</code>
+◈ <code>Pyrogram</code>
 
 📊 <b>Users</b> : {total_users}
 
-©2021<a href=\"https://t.me/szteambots\"> sz Team Bots <sz/>✌️</a> 💐
+©2021<a href=\"https://t.me/szteambots\"> sz Team Bots <sz/></a>
 """
     await update.reply_photo(
                     photo=(random.choice(START_IMG)),
