@@ -38,13 +38,14 @@ GROUP_BTN = InlineKeyboardMarkup(
 HELP_TEXT = f"""
 
 **Help Menu** : 
-- /logo [logo name ]
-- /logohq [logo name ]
-- /rmbg [reply to photo ]
-- /edit [reply to photo ] 
-- /carbon [reply to text]
-- /rlogo [logo name]
-- /wall or wallpaper [name]
+
+- `/logo [logo name ]`
+- `/logohq [logo name ]`
+- `/rmbg` [reply to photo ]
+- `/edit` [reply to photo ] 
+- `/write - [text]`
+- `/carbon` [reply to text]
+- `/wall or wallpaper [name]`
 
 **Powered By** ~ @szteambots
 """
