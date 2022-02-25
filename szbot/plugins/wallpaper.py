@@ -24,11 +24,9 @@ def get_text(message: Message) -> [None, str]:
       
 
 
-@pbot.on_message(filters.command(["wall","wallpaper"]) & ~filters.edited & ~filters.bot)
-async def logo(client, message):
- FSub = await ForceSub(client, message)
- if FSub == 400:
-        return            
+@pbot.on_message(filters.command(["wall","wallpaper"]))
+@ForceSub
+async def logo(client, message):      
  quew = get_text(message)
  if not quew:
      await client.send_message(message.chat.id, "😶 **Please Give me A Text For a query!**")
