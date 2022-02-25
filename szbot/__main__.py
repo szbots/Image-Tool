@@ -37,11 +37,9 @@ START_IMG = (
 )
 
 @sz.on_message(filters.private & filters.incoming & filters.command(["start"]))
+@ForceSub
 async def start(bot, update):
     await AddUserToDatabase(bot, update)
-    FSub = await ForceSub(bot, update)
-    if FSub == 400:
-        return
     total_users = await db.total_users_count()
     START_TEXT = f"""
 👋 Hello {update.from_user.mention} !
@@ -58,19 +56,16 @@ Creator Platform & more tools</b>
 
 📊 <b>Users</b> : {total_users}
 """
-    await update.reply_photo(
-                    photo=(random.choice(START_IMG)),
+    await update.reply_text(
+                    START_TEXT,
                     reply_markup=START_BTN,
-                    caption=START_TEXT,
                     parse_mode="Html")
 
     
-@sz.on_message(filters.command(["start", f"start@szimagebot"]) & ~filters.private & ~filters.channel)
+@sz.on_message(filters.command(["start", f"start@szimagebot"]) & ~filters.private )
+@ForceSub
 async def gstart(bot, update):
     await AddUserToDatabase(bot, update)
-    FSub = await ForceSub(bot, update)
-    if FSub == 400:
-        return
     await update.reply_text(
                     text=START_TEXT.format(update.from_user.mention),
                     reply_markup=CLOSE_BTN,
@@ -78,11 +73,9 @@ async def gstart(bot, update):
                     disable_web_page_preview=True)
 
 @sz.on_message(filters.command(["help", f"help@szimagebot"]))
+@ForceSub
 async def help(bot, update):
     await AddUserToDatabase(bot, update)
-    FSub = await ForceSub(bot, update)
-    if FSub == 400:
-        return
     await update.reply_text(
         text=HELP_TEXT,
         parse_mode="Markdown",
@@ -90,11 +83,9 @@ async def help(bot, update):
         reply_markup=CLOSE_BTN) 
 
 @sz.on_message(filters.command(["about", f"about@szimagebot"]))
+@ForceSub
 async def about(bot, update):
     await AddUserToDatabase(bot, update)
-    FSub = await ForceSub(bot, update)
-    if FSub == 400:
-        return
     await update.reply_text(
         text=ABOUT_TEXT,
         parse_mode="Markdown",
@@ -107,6 +98,7 @@ async def _broadcast(_, bot: Message):
     
     
 @sz.on_message(filters.command("stats") & filters.user(SUDO_USERS))
+@ForceSub
 async def show_status_count(_, bot: Message):
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
@@ -123,11 +115,9 @@ async def show_status_count(_, bot: Message):
     )       
     
 @sz.on_message(filters.command(["ping", f"ping@szimagebot"]))
+@ForceSub
 async def ping(bot, update):
     await AddUserToDatabase(bot, update)
-    FSub = await ForceSub(bot, update)
-    if FSub == 400:
-        return
     start_t = time.time()
     rm = await update.reply_text("**Checking..**")
     end_t = time.time()
