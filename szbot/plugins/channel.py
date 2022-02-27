@@ -44,8 +44,9 @@ logo Genarated Successfully✅
 
 @rose.on_message(filters.command("addchannel"))
 async def sendthepicme(_, message):
-    text = message.text.split(None, 1)[1]
-    picmetxt = """
+    try:
+        text = message.text.split(None, 1)[1]
+        picmetxt = """
 Now You can Create your Image Useing Me!
 
 ✪ Pic me : Capture Your Profile Picture.
@@ -58,7 +59,10 @@ Send To Inbox Automatically You must start
 
 @szimagebot |**User** : `{} `|**Time**: `{}`
 """
-    await rose.send_photo(chat_id=int(text),photo="https://telegra.ph/file/77e05e0b5bd6a60eb5ca9.jpg",caption=picmetxt.format(message.from_user.mention), reply_markup=picmebtns)
+        await rose.send_photo(text,photo="https://telegra.ph/file/77e05e0b5bd6a60eb5ca9.jpg",caption=picmetxt.format(message.from_user.mention), reply_markup=picmebtns)
+    except Exception as e:
+            await rose.send_message(message.from_user.id,"Please make sure sz image bot is promoted as admin in your channel.")
+            print(str(e))
 
 TIME_ZONE = "Asia/colombo"
 
