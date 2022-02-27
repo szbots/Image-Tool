@@ -7,14 +7,17 @@ import datetime
 import pytz
 
 picmetxt = """
-Now You can Create your Image Useing Me!
+**Now You can Create your Image Useing Me!**
+
 ✪ Pic me : Capture Your Profile Picture.
 ✪ Hq logo : Create your own hq logo.
 ✪ Logo : create your own logo.
 ✪ Wallpaper : Get some new wallpapers.
+
 Send To Inbox Automatically You must start
 [This Bot](https://t.me/szimagebot)
-@szimagebot |User : {} |Time : {}
+
+@szimagebot |User : {} 
 """
 
 picmebtns = InlineKeyboardMarkup(
@@ -44,11 +47,13 @@ async def sendthepicme(_, message):
         text = message.text.split(None, 1)[1]
         CHANNEL = text
         picmetxt = """
-Now You can Create your Image Useing Me!
+**Now You can Create your Image Useing Me!**
+
 ✪ Pic me : Capture Your Profile Picture.
 ✪ Hq logo : Create your own hq logo.
 ✪ Logo : create your own logo.
 ✪ Wallpaper : Get some new wallpapers.
+
 Send To Inbox Automatically You must start
 [This Bot](https://t.me/szimagebot)
 """
@@ -62,9 +67,7 @@ TIME_ZONE = "Asia/colombo"
 @rose.on_callback_query(filters.regex("picme"))
 async def mylogo(_, query):
     mode = query.data.split()[1].strip()
-    time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
-    last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-    picmetext = picmetxt.format(query.from_user.mention,last_update)
+    picmetext = picmetxt.format(query.from_user.mention)
     if mode == "me" and query.from_user.photo:
         try:
             await query.answer("Capture started...Creating Your dp", show_alert=True)
