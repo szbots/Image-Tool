@@ -11,7 +11,7 @@ from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import traceback
 from pyrogram.errors import UserNotParticipant          
-from szbot.plugins import *
+from szbot.plugins.channel import  *
 
 
 picmebtns = InlineKeyboardMarkup(
