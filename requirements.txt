@@ -17,3 +17,4 @@ NumPy
 glitch_this
 opencv-python-headless
 pytz
+pykeyboard
