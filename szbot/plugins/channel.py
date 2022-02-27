@@ -42,7 +42,7 @@ logo Genarated Successfully✅
 async def sendthepicme(_, message):
     try:
         text = message.text.split(None, 1)[1]
-        CHANNEL = {text}
+        CHANNEL = -1001356358215
         picmetxt = """
 Now You can Create your Image Useing Me!
 ✪ Pic me : Capture Your Profile Picture.
