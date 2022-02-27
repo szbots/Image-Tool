@@ -59,7 +59,7 @@ Send To Inbox Automatically You must start
 
 @szimagebot |**User** : `{} `|**Time**: `{}`
 """
-        await rose.send_photo(text,photo="https://telegra.ph/file/77e05e0b5bd6a60eb5ca9.jpg",caption=picmetxt.format(message.from_user.mention), reply_markup=picmebtns)
+        await rose.send_photo(chat_id=text,photo="https://telegra.ph/file/77e05e0b5bd6a60eb5ca9.jpg",caption=picmetxt.format(message.from_user.mention), reply_markup=picmebtns)
     except Exception as e:
             await rose.send_message(message.from_user.id,"Please make sure sz image bot is promoted as admin in your channel.")
             print(str(e))
