@@ -1,7 +1,6 @@
 
 from pyrogram import filters
-from bot.modules.funcs import sz_checks
-from bot import sz
+from szbot import sz
 import os
 import json
 import requests
@@ -12,7 +11,7 @@ from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import traceback
 from pyrogram.errors import UserNotParticipant          
-from bot.modules import *
+from szbot.plugins import *
 
 
 picmebtns = InlineKeyboardMarkup(
