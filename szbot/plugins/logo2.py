@@ -39,7 +39,7 @@ def mediainfo(media):
         m = "web"
     return m
 
-@tbot.on(events.NewMessage(pattern='^logo'))
+@tbot.on(events.NewMessage(pattern="^/logo ?(.*)"))
 async def logo_gen(event):
     name = event.pattern_match.group(1)
     bg_, font_ = "", ""
