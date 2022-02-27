@@ -24,6 +24,9 @@ START_BTN = InlineKeyboardMarkup(
                     InlineKeyboardButton("Updates", url="https://t.me/szteambots"),
                     InlineKeyboardButton("Support", url="https://t.me/slbotzone")
                 ],
+                [
+                    InlineKeyboardButton("Add to Your Group", url="http://t.me/szimagebot?startgroup=true")
+                ],
             ]
         )
 
@@ -38,7 +41,7 @@ GROUP_BTN = InlineKeyboardMarkup(
 HELP_TEXT = f"""
 
 **Help Menu** : 
-
+- /addchannel [channel id] - need admin power with all[bot]
 - `/logo [logo name ]`
 - `/logohq [logo name ]`
 - `/rmbg` [reply to photo ]
@@ -70,6 +73,7 @@ This Bot Based on @MalithRukshan **Logo API**
 
 ᗚ **Features** : 
 
+[+] Channel/group also support.
 [+] Api Based logo Creator.
 [+] Rando logo Creator .
 [+] Carbon maker.
