@@ -31,7 +31,7 @@ async def inline_help_func():
     answerss = [
         InlineQueryResultArticle(
             title="Button Menu",
-            description="Now you can create your own logo create tool useing this bot",
+            description="logo create tool Available",
             input_message_content=InputTextMessageContent(
                 """
 **Now You can Create your Image Useing Me!**
@@ -39,10 +39,7 @@ async def inline_help_func():
 ✪ Pic me : Capture Your Profile Picture.
 ✪ Hq logo : Create your own hq logo.
 ✪ Logo : create your own logo.
-✪ Wallpaper : Get some new wallpapers.
-
-Send To Inbox Automatically You must start
-[This Bot](https://t.me/szimagebot)               
+✪ Wallpaper : Get some new wallpapers.           
                 """
             ),
             thumb_url="https://telegra.ph/file/77e05e0b5bd6a60eb5ca9.jpg",
